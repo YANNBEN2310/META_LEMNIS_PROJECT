@@ -1,0 +1,265 @@
+body, html {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.button {
+    position: absolute;
+    bottom: 10px;
+    width: 120px;
+    padding: 10px 20px;
+    margin-left: 20px;
+    border: 1px solid transparent;
+    border-radius: 30px;
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#previousButton {
+    left: 10px;
+    margin-left: 0;
+}
+
+#nextButton {
+    left: calc(10px + 120px + 20px);
+}
+
+#accelerateButton {
+    left: calc(10px + (120px + 20px) * 2);
+}
+
+#decreaseButton {
+    left: calc(10px + (120px + 20px) * 3);
+}
+
+#recordButton {
+    right: 10px;
+}
+
+.button:hover {
+    transform: scale(1.10);
+    background-image: linear-gradient(to right, red, blue);
+}
+
+/* Colors */
+:root {
+    --primary: #d43a2f;
+    --secondary: #000000;
+}
+
+/* Typography */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Layout */
+header {
+    background: var(--primary);
+    background-image: url(images/background_header.webp);
+    color: #fff;
+    text-align: center;
+    padding: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .4s ease-in-out;
+    position: relative;
+}
+
+header h1 {
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-block;
+    transition: all .4s ease-in-out;
+}
+
+header:hover h1 {
+    left: 1rem;
+    transform: translateX(0);
+}
+
+header:hover {
+    background-image: linear-gradient(to right, red, blue);
+}
+
+header nav {
+    display: flex;
+    opacity: 0;
+    transform: translateX(100px);
+    transition: opacity .4s ease-in-out, transform .4s ease-in-out;
+    margin-left: 20px;
+    position: absolute;
+    right: 1rem;
+}
+
+header:hover nav {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.nav-item {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* Shake Animation Keyframes */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-10px); }
+    20%, 40%, 60%, 80% { transform: translateX(10px); }
+}
+
+/* Apply Shake Animation on Hover */
+.nav-item:hover {
+    animation: shake 0.8s ease-in-out;
+}
+
+.sprite-button {
+    background: transparent;
+    width: 50px;
+    height: 50px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#nextSlide {
+    z-index: 1000;
+    background-image: url('images/next.png');
+    right: 5px;
+}
+
+
+#previousSlide {
+    background-image: url('images/previous.png');
+    left: 10px;
+}
+
+.vertical-timeline {
+    width: 80px;
+    height: auto;
+    position: fixed;
+    left: 150px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.vertical-timeline.founders {
+    left: auto;
+    right: -600px;
+}
+
+.vertical-timeline .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background-color: #f0f0f0;
+    border-radius: 50%;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.vertical-timeline .swiper-slide-active {
+    background-color: #333;
+    color: #fff;
+}
+
+.tooltip {
+    position: absolute;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 35px;
+    z-index: 10;
+    pointer-events: none;
+    font-size: 1.2em;
+}
+
+.hidden {
+    display: none;
+}
+
+.swiper-container {
+    width: 50%;
+    float: left;
+    z-index: 1;
+}
+
+.swiper-container.right {
+    float: right;
+}
+.vertical-timeline:not(.founders) .swiper-slide:hover {
+    transform: scale(1.15);
+    background-image: linear-gradient(to right, red, blue);
+    color: #fff;
+}
+
+.vertical-timeline:not(.founders) .swiper-slide:not(.swiper-slide-active):hover {
+    color: #fff;
+}
+
+.vertical-timeline.founders .swiper-slide {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1; /* add this line */
+  }
+  
+  
+  .vertical-timeline.founders .swiper-slide:hover {
+    transform: scale(1.5);
+    background-color: #333;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  }
+
+
+  
+  .vertical-timeline.founders .swiper-slide:nth-child(1) {
+    background-image: url('images/mark.jpg');
+  }
+  
+  .vertical-timeline.founders .swiper-slide:nth-child(2) {
+    background-image: url('images/eduardo.jpeg');
+  }
+  
+  .vertical-timeline.founders .swiper-slide:nth-child(3) {
+    background-image: url('images/andrew.jpeg');
+  }
+  
+  .vertical-timeline.founders .swiper-slide:nth-child(4) {
+    background-image: url('images/dustin.jpg');
+  }
+  
+  .vertical-timeline.founders .swiper-slide:nth-child(5) {
+    background-image: url('images/chris.jpg');
+  }
+  

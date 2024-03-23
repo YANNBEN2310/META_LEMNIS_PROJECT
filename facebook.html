@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Meta Acquisitions Graphs</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        /* CSS styles here */
+        .chart-container {
+            width: 600px;
+            height: 400px;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #chart-container {
+            max-width: 600px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="chart-container">
+    <canvas id="acquisitionChart"></canvas>
+</div>
+
+<script src="acquisitionData.js"></script>
+
+</body>
+</html>
