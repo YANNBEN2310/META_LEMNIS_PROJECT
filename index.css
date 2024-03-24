@@ -263,3 +263,15 @@ header:hover nav {
     background-image: url('images/chris.jpg');
   }
   
+header h2 {
+    display: none;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1; /* Ensure the h2 is above the background image */
+}
+
+header:hover h2 {
+    display: block;
+}

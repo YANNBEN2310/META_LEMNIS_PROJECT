@@ -1,38 +1,73 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Meta Acquisitions Graphs</title>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <style>
-        /* CSS styles here */
-        .chart-container {
-            width: 600px;
-            height: 400px;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-
-        #chart-container {
-            max-width: 600px;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fusion</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
 </head>
 <body>
+    <header class="ribbon-hover">
+        <h1>Meta Lemnis</h1>
+        <nav>
+            <a href="#about" class="nav-item">Dates Clés</a>
+            <a href="#contacts" class="nav-item">Fondateurs</a>
+            <a href="#learn" class="nav-item">Transformations</a>
+            <a href="#support" class="nav-item">Support</a>
+        </nav>
+    </header>
 
-<div class="chart-container">
-    <canvas id="acquisitionChart"></canvas>
-</div>
+    <div class="swiper-container vertical-timeline">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" data-info="4 février 2004 : Création à l'université Harvard de thefacebook par Mark Zuckerberg">2004</div>
+            <div class="swiper-slide" data-info="1er août 2005 : thefacebook devient Facebook">2005</div>
+            <div class="swiper-slide" data-info="Facebook atteint 100 millions d'utilisateurs">2008</div>
+            <div class="swiper-slide" data-info="Facebook achète l'entreprise Instagram">2012</div>
+            <div class="swiper-slide" data-info="Mai 2012 : Facebook est introduit à la bourse de New-York">2012</div>
+            <div class="swiper-slide" data-info="Octobre 2012 : Facebook atteint 1 milliard d'utilisateurs">2012</div>
+            <div class="swiper-slide" data-info="Février 2014 : Facebook achète l'entreprise WhatsApp pour 19 milliards de dollars">2014</div>
+            <div class="swiper-slide" data-info="Mars 2014 : Facebook achète l'entreprise Oculus VR">2014</div>
+            <div class="swiper-slide" data-info="Septembre 2019 : Facebook achète CTRL-Labs, une entreprise spécialisée dans l’interface cerveau-machine">2019</div>
+            <div class="swiper-slide" data-info="Mai 2019 : Chris Hughes, un des cofondateurs originaux de Facebook, appelle à démanteler Facebook">2019</div>
+            <div class="swiper-slide" data-info="Septembre 2020: absorbe la start-up Lemnis Technologies, spécialisée dans les sytèmes AR/VR">2020</div>
+        </div>
+    </div>
 
-<script src="acquisitionData.js"></script>
+    <div class="swiper-container vertical-timeline founders">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" data-info=" Mark Zuckerberg"></div>
+            <div class="swiper-slide" data-info="Eduardo Saverin"></div>
+            <div class="swiper-slide" data-info="Andrew McCollum"></div>
+            <div class="swiper-slide" data-info="Dustin Moskovitz"></div>
+            <div class="swiper-slide" data-info="Chris Hughes"></div>
+        </div>
+    </div>
 
+    <div id="tooltip" class="tooltip hidden">
+        <span id="tooltip-text"></span>
+    </div>
+
+    <a href="facebook.html" id="nextSlideLink" style="text-decoration: none;">
+        <button id="nextSlide" class="button sprite-button"></button>
+    </a>
+
+    <a href="index.html" id="nextSlideLink" style="text-decoration: none;">
+        <button id="previousSlide" class="button sprite-button"></button>
+    </a>
+    
+
+    <button id="previousButton" class="button">Previous</button>
+    <button id="nextButton" class="button">Next</button>
+    <button id="accelerateButton" class="button">Accelerate</button>
+    <button id="decreaseButton" class="button">Decrease</button>
+    <button id="recordButton" class="button">Record</button>
+
+    <canvas id="myCanvas"></canvas>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.126.1/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.126.1/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ccapture.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
