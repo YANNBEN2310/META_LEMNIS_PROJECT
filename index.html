@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fusion</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+</head>
+<body>
+    <header class="ribbon-hover">
+        <h1>Yann's backgrounds</h1>
+        <h2>Fullstack Engineer - Data Scientist </h2>
+        <nav>
+            <a href="#web-development" class="nav-item">Web Development</a>
+            <a href="#data-science" class="nav-item">Data Science</a>
+            <a href="#software-and-app-engineering" class="nav-item">Software and App Engineering</a>
+            <a href="#databases" class="nav-item">Databases</a>
+            
+        </nav>
+    </header>
+
+    <div class="swiper-container vertical-timeline">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" data-info="Birth">1992</div>
+            <div class="swiper-slide" data-info="Mathematics Baccalaureat Diploma">2011</div>
+            <div class="swiper-slide" data-info="Mathematics Baccalaureat Diploma">2012</div>
+            <div class="swiper-slide" data-info="Master of Science and technology - Architecture - University of Tizi-ouzou">2016</div>
+            <div class="swiper-slide" data-info="Bachelor's Degree in Mathematics and Computer Science- University of Tizi-ouzou">2017</div>
+            <div class="swiper-slide" data-info="Bachelor's in Computer Science - GOLDEN COLLAR INSTITUE">2018</div>
+            <div class="swiper-slide" data-info=" Bachelor's Degree - Civil Engineering - BIM - Gustave Eiffel School">2019</div>
+            <div class="swiper-slide" data-info="Preparing a Master of Science Degree in AI | Big Data | Data Science ">2024</div>
+        </div>
+    </div>
+    
+
+    <div class="swiper-container vertical-timeline founders">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" data-info="2018 - 2023 : BIM Coordinator at SETEC NUCLEAIRE ( Nuclear Power Plant Project in UK) - Paris - Permanent "></div>
+            <div class="swiper-slide" data-info="2023 - Now : IT - BIM & Energy Consultant - Permanent"></div>
+            <div class="swiper-slide" data-info="2023: Real Estate and Energy Consultant - Indirect Contract"></div>
+            <div class="swiper-slide" data-info="2023 - 2024: Data Analyst - Energy Manager" ></div>
+            <div class="swiper-slide" data-info="Future Loading ... Present: I am open to new job opportunities and challenges, especially considering Switzerland, where I could be closer to my brother. " ></div>
+        </div>
+    </div>
+
+    <div id="tooltip" class="tooltip hidden">
+        <span id="tooltip-text"></span>
+    </div>
+
+    <a href="facebook.html" id="nextSlideLink" style="text-decoration: none;">
+        <button id="nextSlide" class="button sprite-button"></button>
+    </a>
+
+    <a href="home.html" id="nextSlideLink" style="text-decoration: none;">
+        <button id="previousSlide" class="button sprite-button"></button>
+    </a>
+    
+
+    <button id="previousButton" class="button">Previous</button>
+    <button id="nextButton" class="button">Next</button>
+    <button id="accelerateButton" class="button">Accelerate</button>
+    <button id="decreaseButton" class="button">Decrease</button>
+    <button id="recordButton" class="button">Record</button>
+
+    <canvas id="myCanvas"></canvas>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.126.1/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.126.1/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ccapture.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

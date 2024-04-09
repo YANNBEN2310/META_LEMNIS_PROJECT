@@ -1,0 +1,424 @@
+/* Colors */  
+:root {
+    --primary: #d43a2f;
+    --secondary: #000000; 
+}
+
+/* Typography */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}  
+
+/* Layout */
+header, footer {
+    background: var(--primary);
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .4s ease-in-out; /* Ensure smooth transition */
+}
+
+header:hover, footer:hover {
+    background-image: linear-gradient(90deg, var(--secondary), var(--primary));
+}
+
+/* Hover effects for header and footer */
+header:hover h1 {
+    transform: translateX(-500px); /* Increased movement for demonstration */
+}
+
+footer:hover p {
+    transform: translateX(600px); /* Increased movement for demonstration */
+}
+
+/* Initial state for transformation */
+header h1, footer p {
+    display: inline-block;
+    transition: transform .4s ease-in-out;
+}
+
+/* Navigation items in header */
+header nav {
+    display: flex;
+    opacity: 0;
+    transform: translateX(100px); /* Initially positioned out of view */
+    transition: opacity .4s ease-in-out, transform .4s ease-in-out;
+    margin-left: 20px; /* Adjust spacing between h1 and nav items */
+}
+
+header:hover nav {
+    opacity: 1;
+    transform: translateX(0); /* Bring into view */
+}
+
+.nav-item {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* Main content layout */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Hero Section */
+.hero {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.hero-content {
+    margin-bottom: 60px;
+}
+
+/* Global box-sizing */
+* {
+    box-sizing: border-box;
+}
+
+/* Button styles */
+.buttons {
+    margin: 10%;
+    text-align: center;
+}
+
+.btn-hover {
+    width: 200px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    margin: 20px;
+    height: 55px;
+    text-align: center;
+    border: none;
+    background-size: 300% 100%;
+    border-radius: 30px;
+    transition: all .4s ease-in-out;
+}
+
+.btn-hover:hover {
+    background-position: 100% 0;
+}
+
+.btn-hover:focus {
+    outline: none;
+}
+
+.signup, .login {
+    padding: 12px 24px;
+    border-radius: 30px;
+    margin: 10px;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* Signup and login button styles */
+.signup {
+    background-image: linear-gradient(to right, #f5ce62, #e43603, #fa7199, #e85a19);
+    box-shadow: 0 4px 15px 0 rgba(229, 66, 10, 0.75);
+}
+
+.login {
+    background-image: linear-gradient(to right, #667eea, #764ba2, #6B8DD6, #8E37D7);
+    box-shadow: 0 4px 15px 0 rgba(116, 79, 168, 0.75);
+}
+
+/* Footer fixed to the bottom */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+/* Slideshow styling */
+.slideshow {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    animation: fade 20s infinite;
+}
+
+/* Animation for slides */
+@keyframes fade {
+    0% {opacity: 1;}
+    33% {opacity: 1;}
+    66% {opacity: 0;}
+    100% {opacity: 0;}
+}
+
+.slide:nth-of-type(2) {animation-delay: 6.66s;}
+
+.slide {
+    animation-name: fade;
+    animation-duration: 2.5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+.title {
+    position: relative;
+}
+/* Shake Animation Keyframes */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-10px); }
+    20%, 40%, 60%, 80% { transform: translateX(10px); }
+  }
+  
+  /* Apply Shake Animation on Hover */
+  .nav-item:hover {
+    animation: shake 0.8s ease-in-out;
+  }
+/* Your existing CSS properties... */
+
+/* Heartbeat Animation for Paragraph on Hover */
+@keyframes heartbeat {
+    0% { transform: scale(1); }
+    14% { transform: scale(1.1); }
+    28% { transform: scale(1); }
+    42% { transform: scale(1.1); }
+    70% { transform: scale(1); }
+  }
+  
+  .hero-content h2:hover {
+    animation: heartbeat 1s ease-in-out;
+    animation-iteration-count: infinite;
+  }
+
+/* Add this to your existing styles.css file */
+
+.signup-form {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 40px; /* Increased padding */
+    border-radius: 30px;
+    width: 90%; /* Use a percentage-based width for responsiveness */
+    max-width: 500px; /* Maximum width to ensure the form doesn't get too large */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box; /* Ensures padding is included in the width calculation */
+}
+
+@media (max-width: 600px) {
+    .signup-form {
+        width: 80%; /* Adjust width for smaller screens */
+        padding: 20px; /* Adjust padding for smaller screens */
+        background: linear-gradient(to right, rgb(14, 0, 0), rgb(39, 3, 3), rgb(27, 27, 1)); /* Adds a gradient background */
+    }
+}
+
+
+
+.auth-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    color: #333;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 20px;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Updated to include all transform properties */
+    font-size: 14px;
+    width: 200px; /* Sets a specific width for uniformity */
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.2); /* Optional: Adds a slight shadow for depth */
+  }
+  
+  .auth-btn:hover {
+    background: linear-gradient(to right, blue, red, yellow); /* Adds a gradient background */
+    color: #fff; /* Changes text color to white for better visibility */
+    transform: scale(1.05); /* Slightly increases the size of the button */
+  }
+  
+  .auth-btn img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+  
+  .hidden {
+      display: none;
+  }
+  #closeFormBtn {
+    background-color: #f44336; /* Red background for distinction */
+    color: #ffffff; /* White text */
+    border: none;
+    border-radius: 30px;
+    padding: 10px 20px;
+    margin-top: 20px; /* Additional spacing from the auth buttons */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 14px;
+    width: 200px; /* Ensures it matches the width of the auth buttons for consistency */
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.2); /* Adds a slight shadow for depth */
+  }
+  
+  #closeFormBtn:hover {
+    background-color: #d32f2f; /* Darker red on hover for interaction feedback */
+    transform: scale(1.05); /* Slightly increases the size for consistency with the auth buttons */
+  }
+  
+  .form-container h3 {
+    color: #ffffff; /* Sets the color of the h3 text to white */
+    font-size: 24px;
+}
+
+@keyframes heartbeat_2 {
+    0% { transform: scale(1); }
+    14% { transform: scale(1.1); }
+    28% { transform: scale(1); }
+    42% { transform: scale(1.1); }
+    70% { transform: scale(1); }
+  }
+  
+  .hero-content h3:hover {
+    animation: heartbeat_2 1s ease-in-out;
+    animation-iteration-count: infinite;
+  }
+  
+  .shake-box {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .shake-box:hover {
+    animation: shake 0.5s ease-in-out;
+  }
+  
+  @keyframes shake {
+    0% {
+      transform: translate(0);
+    }
+    10% {
+      transform: translate(-10px, 0);
+    }
+    20% {
+      transform: translate(10px, 0);
+    }
+    30% {
+      transform: translate(-10px, 0);
+    }
+    40% {
+      transform: translate(10px, 0);
+    }
+    50% {
+      transform: translate(-10px, 0);
+    }
+    60% {
+      transform: translate(10px, 0);
+    }
+    70% {
+      transform: translate(-10px, 0);
+    }
+    80% {
+      transform: translate(10px, 0);
+    }
+    90% {
+      transform: translate(-10px, 0);
+    }
+    100% {
+      transform: translate(0);
+    }
+  }
+  .header-img-container {
+    position: absolute;
+    left: 20px;
+    top: 100%;
+    margin-top: 20px;
+    z-index: 1; /* Add this line */
+  }
+  
+  
+  .header-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .header-img:hover {
+    animation: shake 0.5s ease-in-out;
+  }
+  
+  @keyframes shake {
+    0% {
+      transform: translate(0);
+    }
+    10% {
+      transform: translate(-10px, 0);
+    }
+    20% {
+      transform: translate(10px, 0);
+    }
+    30% {
+      transform: translate(-10px, 0);
+    }
+    40% {
+      transform: translate(10px, 0);
+    }
+    50% {
+      transform: translate(-10px, 0);
+    }
+    60% {
+      transform: translate(10px, 0);
+    }
+    70% {
+      transform: translate(-10px, 0);
+    }
+    80% {
+      transform: translate(10px, 0);
+    }
+    90% {
+      transform: translate(-10px, 0);
+    }
+    100% {
+      transform: translate(0);
+    }
+  }
+  

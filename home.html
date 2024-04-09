@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Yann BEN ABDERRAHMANE</title>
+
+  <!-- Responsive meta tag -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles_home.css">
+
+</head>
+
+<body>
+
+  <div class="slideshow">
+    <!-- Slideshow images -->
+    <div class="slide fade" style="background-image: url('images/1.jpg');"></div>
+    <div class="slide fade" style="background-image: url('images/2.jpg');"></div>
+    <div class="slide fade" style="background-image: url('images/3.jpg');"></div>
+    <div class="slide fade" style="background-image: url('images/4.jpg');"></div>
+    <div class="slide fade" style="background-image: url('images/5.jpg');"></div>
+    <div class="slide fade" style="background-image: url('images/6.jpg');"></div>
+    <div class="slide fade" style="background-image: url('images/7.jpg');"></div>
+    <div class="slide fade" style="background-image: url('images/8.jpg');"></div>
+    <div class="slide fade" style="background-image: url('images/9.jpg');"></div>
+    <div class="slide fade" style="background-image: url('images/10jpg');"></div>
+  
+    <!-- Add more slides as needed -->
+  </div>
+
+  <header class="ribbon-hover">
+    <h1>Yann BEN ABDERRAHMANE</h1>
+    <nav>
+      <a href="#web-development" class="nav-item">Web Development</a>
+      <a href="#data-science" class="nav-item">Data Science</a>
+      <a href="#software-and-app-engineering" class="nav-item">Software and App Engineering</a>
+      <a href="#databases" class="nav-item">Databases</a>
+    </nav>
+  </header>
+
+  <div class="header-img-container">
+    <img src="yann.jpg" alt="Yann's image" class="header-img">
+  </div>
+
+  <main>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <h2>Looking for opportunities</h2>
+        <p>as a Software Engineer, Data Scientist, Machine Learning Engineer and Data Engineer.</p>
+        <div class="shake-box">
+          <p>I am actively seeking new opportunities in the Data | Dev sector. My academic journey towards a Master's
+            in Artificial Intelligence and Data Science at IA School has given me a robust foundation in fields such as
+            energy, Building Information Modeling & Management (BIM), as well as Architecture, Engineering, and
+            Construction (AEC). I am deeply passionate about harnessing AI to boost energy efficiency and advance
+            BIM and AEC processes. Although I have not worked directly in the banking and finance sectors, I am
+            eager to bring my data expertise to these industries, aiming to contribute to sustainable and innovative
+            practices. I am open to roles in any field where my data skills can be applied to meet new challenges and
+            drive technological progress.</p>
+        </div>
+
+        <div class="buttons">
+          <!-- Create Account Button -->
+          <button class="btn-hover signup" id="createAccountBtn">Start</button>
+          <!-- Hidden Signup Form -->
+          <div id="signupForm" class="signup-form hidden">
+            <div class="form-container">
+              <h3>Create account</h3>
+              <!-- Google Sign In -->
+              <button class="auth-btn google">
+                <img src="auth_logo/google_128.png" alt="Google logo"> Continue with Google
+              </button>
+              <!-- Facebook Sign In -->
+              <button class="auth-btn facebook">
+                <img src="auth_logo/facebook_128.png" alt="Facebook logo"> Log in with Facebook
+              </button>
+              <!-- Phone Number Sign In -->
+              <button class="auth-btn phone">
+                <img src="auth_logo/phone_128.png" alt="Phone logo"> Log in with phone number
+              </button>
+              <button id="closeFormBtn">Close</button>
+            </div>
+          </div>
+          <!-- Login Button -->
+          
+          <a href="index.html" id="loginBtn" style="text-decoration: none;">
+            <button class="btn-hover login" id="loginBtn">Login</button>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Features -->
+    <section class="features">
+      <!-- Feature boxes -->
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="ribbon-hover">
+    <p>&copy; Yann's RESUME - 2023 </p>
+  </footer>
+
+<script src="script_home.js"></script>
+</body>
+</html>

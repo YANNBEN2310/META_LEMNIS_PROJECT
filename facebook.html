@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fusion</title>
+    <link rel="stylesheet" href="index_facebook.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+</head>
+<body>
+    <header class="ribbon-hover">
+        <h1>Yann's Certificates</h1>
+        <h2>Fullstack Engineer - Data Scientist </h2>
+        <nav>
+            <a href="#web-development" class="nav-item">Web Development</a>
+            <a href="#data-science" class="nav-item">Data Science</a>
+            <a href="#software-and-app-engineering" class="nav-item">Software and App Engineering</a>
+            <a href="#databases" class="nav-item">Databases</a>
+            
+        </nav>
+    </header>
+
+    <div class="swiper-container vertical-timeline">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" data-info="Birth">1992</div>
+            <div class="swiper-slide" data-info="Mathematics Baccalaureat Diploma">2011</div>
+            <div class="swiper-slide" data-info="Mathematics Baccalaureat Diploma">2012</div>
+            <div class="swiper-slide" data-info="Master of Science and technology - Architecture - University of Tizi-ouzou">2016</div>
+            <div class="swiper-slide" data-info="Bachelor's Degree in Mathematics and Computer Science- University of Tizi-ouzou">2017</div>
+            <div class="swiper-slide" data-info="Bachelor's in Computer Science - GOLDEN COLLAR INSTITUE">2018</div>
+            <div class="swiper-slide" data-info=" Bachelor's Degree - Civil Engineering - BIM - Gustave Eiffel School">2019</div>
+            <div class="swiper-slide" data-info="Preparing a Master of Science Degree in AI | Big Data | Data Science ">2024</div>
+        </div>
+    </div>
+    
+
+    <div class="swiper-container vertical-timeline founders">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" data-info="2023 : Meta Back End Developer Professional Certificate"></div>
+            <div class="swiper-slide" data-info="2023 : Meta Database Engineer Professional Certificate"></div>
+            <div class="swiper-slide" data-info="2023 : Imperial London College : Mathematics and Machine Learning"></div>
+            <div class="swiper-slide" data-info="2024 : IA School Paris - Preparing a Master Degree in AI Big Data and Data Science"></div>
+        </div>
+    </div>
+
+    <div id="tooltip" class="tooltip hidden">
+        <span id="tooltip-text"></span>
+    </div>
+
+    <a href="date_page.html" id="nextSlideLink" style="text-decoration: none;">
+        <button id="nextSlide" class="button sprite-button"></button>
+    </a>
+
+    <a href="home.html" id="nextSlideLink" style="text-decoration: none;">
+        <button id="previousSlide" class="button sprite-button"></button>
+    </a>
+    
+
+    <button id="previousButton" class="button">Previous</button>
+    <button id="nextButton" class="button">Next</button>
+    <button id="accelerateButton" class="button">Accelerate</button>
+    <button id="decreaseButton" class="button">Decrease</button>
+    <button id="recordButton" class="button">Record</button>
+
+    <canvas id="myCanvas"></canvas>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.126.1/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.126.1/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ccapture.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="script_facebook.js"></script>
+</body>
+</html>
